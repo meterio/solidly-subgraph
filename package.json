@@ -1,13 +1,13 @@
 {
-  "name": "meterio-uniswap-v2-subgraph",
+  "name": "meterio-solidly-uniswap-v2-subgraph",
   "version": "1.0.0",
   "license": "GPL-3.0-or-later",
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "create-meter": "graph create meterio/uniswap-v2-subgraph --node http://127.0.0.1:8020",
-    "deploy-meter": "graph deploy meterio/uniswap-v2-subgraph --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
-    "deploy": "graph deploy meterio/uniswapv2 --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
+    "create-meter": "graph create meterio/solidly-subgraph --node http://127.0.0.1:8020",
+    "deploy-meter": "graph deploy meterio/solidly-subgraph --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
+    "deploy": "graph deploy meterio/solidly --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
     "deploy-staging": "graph deploy $THE_GRAPH_GITHUB_USER/$THE_GRAPH_SUBGRAPH_NAME /Uniswap --ipfs https://api.staging.thegraph.com/ipfs/ --node https://api.staging.thegraph.com/deploy/",
     "watch-local": "graph deploy graphprotocol/Uniswap2 --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
   },
