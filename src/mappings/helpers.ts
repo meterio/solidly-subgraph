@@ -8,7 +8,7 @@ import { Factory as FactoryContract } from '../types/templates/Pair/Factory'
 import { TokenDefinition } from './tokenDefinition'
 
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000'
-export const FACTORY_ADDRESS = '0x56aD9A9149685b290ffeC883937caE191e193135'
+export const FACTORY_ADDRESS = '0xa36f84b86cEF6E3315EFee41ca14e33E7C7C31D2'
 
 export let ZERO_BI = BigInt.fromI32(0)
 export let ONE_BI = BigInt.fromI32(1)
@@ -60,7 +60,7 @@ export function isNullEthValue(value: string): boolean {
 export function fetchTokenSymbol(tokenAddress: Address): string {
   // static definitions overrides
   let staticDefinition = TokenDefinition.fromAddress(tokenAddress)
-  if(staticDefinition != null) {
+  if (staticDefinition != null) {
     return (staticDefinition as TokenDefinition).symbol
   }
 
@@ -88,7 +88,7 @@ export function fetchTokenSymbol(tokenAddress: Address): string {
 export function fetchTokenName(tokenAddress: Address): string {
   // static definitions overrides
   let staticDefinition = TokenDefinition.fromAddress(tokenAddress)
-  if(staticDefinition != null) {
+  if (staticDefinition != null) {
     return (staticDefinition as TokenDefinition).name
   }
 
@@ -126,7 +126,7 @@ export function fetchTokenTotalSupply(tokenAddress: Address): BigInt {
 export function fetchTokenDecimals(tokenAddress: Address): BigInt {
   // static definitions overrides
   let staticDefinition = TokenDefinition.fromAddress(tokenAddress)
-  if(staticDefinition != null) {
+  if (staticDefinition != null) {
     return (staticDefinition as TokenDefinition).decimals
   }
 

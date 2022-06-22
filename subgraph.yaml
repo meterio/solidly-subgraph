@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: meter
+    network: metertest
     source:
       address: '0xa36f84b86cEF6E3315EFee41ca14e33E7C7C31D2'
       abi: Factory
-      startBlock: 15039518
+      startBlock: 10039518
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -35,7 +35,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pair
-    network: meter
+    network: metertest
     source:
       abi: Pair
     mapping:
@@ -60,7 +60,7 @@ templates:
           handler: handleSwap
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-        - event: Sync(uint112,uint112)
+        - event: Sync(uint256,uint256)
           handler: handleSync
 
 

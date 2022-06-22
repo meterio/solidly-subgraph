@@ -6,7 +6,7 @@ import {
 
 // Initialize a Token Definition with the attributes
 export class TokenDefinition {
-  address : Address
+  address: Address
   symbol: string
   name: string
   decimals: BigInt
@@ -25,7 +25,7 @@ export class TokenDefinition {
 
     // Add MTRG
     let tokenMeterGov = new TokenDefinition(
-      Address.fromString('0x228ebBeE999c6a7ad74A6130E81b12f9Fe237Ba3'),
+      Address.fromString('0x8A419EF4941355476CF04933E90BF3BBF2F73814'),
       'MTRG',
       'MeterGov',
       BigInt.fromI32(18)
@@ -34,7 +34,7 @@ export class TokenDefinition {
 
     // Add MTR
     let tokenMeter = new TokenDefinition(
-      Address.fromString('0x687A6294D0D6d63e751A059bf1ca68E4AE7B13E2'),
+      Address.fromString('0x4cb6cEf87d8cADf966B455E8BD58ffF32aBA49D1'),
       'MTR',
       'Meter',
       BigInt.fromI32(18)
@@ -45,14 +45,14 @@ export class TokenDefinition {
   }
 
   // Helper for hardcoded tokens
-  static fromAddress(tokenAddress: Address) : TokenDefinition | null {
+  static fromAddress(tokenAddress: Address): TokenDefinition | null {
     let staticDefinitions = this.getStaticDefinitions()
     let tokenAddressHex = tokenAddress.toHexString()
 
     // Search the definition using the address
     for (let i = 0; i < staticDefinitions.length; i++) {
       let staticDefinition = staticDefinitions[i]
-      if(staticDefinition.address.toHexString() == tokenAddressHex) {
+      if (staticDefinition.address.toHexString() == tokenAddressHex) {
         return staticDefinition
       }
     }

@@ -18,7 +18,7 @@ import {
 export function handleNewPair(event: PairCreated): void {
   // load factory (create if first exchange)
   let factory = UniswapFactory.load(FACTORY_ADDRESS)
-//console.log("Factory", factory)
+  //console.log("Factory", factory)
   if (factory === null) {
     //console.log("Factory null here", factory)
     factory = new UniswapFactory(FACTORY_ADDRESS)
@@ -44,7 +44,7 @@ export function handleNewPair(event: PairCreated): void {
   let token0 = Token.load(event.params.token0.toHexString())
   let token1 = Token.load(event.params.token1.toHexString())
 
-  
+
   // fetch info if null
   if (token0 === null) {
     token0 = new Token(event.params.token0.toHexString())
@@ -115,8 +115,8 @@ export function handleNewPair(event: PairCreated): void {
   //console.log("pair ", pair)
   // create the tracked contract based on the template
   //console.log("event pair", event.params.pair)
-  
-  
+
+
   PairTemplate.create(event.params.pair)
 
   // save updated values
