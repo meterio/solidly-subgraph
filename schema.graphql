@@ -65,7 +65,7 @@ type Pair @entity {
   reserve0: BigDecimal!
   reserve1: BigDecimal!
   totalSupply: BigDecimal!
-
+  
   # derived liquidity
   reserveETH: BigDecimal!
   reserveUSD: BigDecimal!
