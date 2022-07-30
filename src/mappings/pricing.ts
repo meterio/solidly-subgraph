@@ -4,11 +4,11 @@ import { BigDecimal, Address, BigInt } from '@graphprotocol/graph-ts/index'
 import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD, UNTRACKED_PAIRS } from './helpers'
 
 
-const WETH_ADDRESS = '0x228ebbee999c6a7ad74a6130e81b12f9fe237ba3'
-const USDC_WETH_PAIR = '0x3bb40a0765fe25db3c12a934c0dd32dfc7638b6d' // created 10008355
-const DAI_WETH_PAIR = '0x936a7F8C5040150c331b45c32Cdb03E8e1B117B2' // created block 10042267
-const USDT_WETH_PAIR = '0xcb89b1705474cd0bcc820df98539b71605f15476' // created block 10093341
-const BUSD_WETH_PAIR = '0xaca210bd7d12c15560994e4c7b2bec1b538ad306'
+const WETH_ADDRESS = '0x8a419ef4941355476cf04933e90bf3bbf2f73814'
+const USDC_WETH_PAIR = '0xc6eeff592c8037ae513801d758e496b3b896976d' // created 10008355
+const DAI_WETH_PAIR = '0xa5d580c8a994e25117bc0f7ee396e8ed81a8fb69' // created block 10042267
+const USDT_WETH_PAIR = '0xa46937e3629dd2b54b77ad238c646d1fbdc5ee10' // created block 10093341
+const BUSD_WETH_PAIR = '0x91ddc91400fb1c215da5fdf4623d3f705f5f9024'
 
 export function getEthPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin
@@ -43,20 +43,17 @@ export function getEthPriceInUSD(): BigDecimal {
 
 // token where amounts should contribute to tracked volume and liquidity
 let WHITELIST: string[] = [
-  '0x228ebbee999c6a7ad74a6130e81b12f9fe237ba3',
-  '0x687a6294d0d6d63e751a059bf1ca68e4ae7b13e2',
-  '0xd86e243fc0007e6226b07c9a50c9d70d78299eb5',// usdc
-  '0xf8bbb44e6fd13632d36fe09eb61820f9a44f5d74',// bnb
-  '0x24aa189dfaa76c671c279262f94434770f557c35',//busd
-  '0x5fa41671c48e3c951afc30816947126ccc8c162e', //usdt
-  '0x8df95e66cb0ef38f91d2776da3c921768982fba0', //voltswap
-  '0xc1f6C86ABEe8e2e0B6fd5BD80F0b51fef783635C', //wbtc
-  '0x79a61d3a28f8c8537a3df63092927cfa1150fb3c', //weth
-  '0xb158870beB809Ad955Bf56065C5C10D7Fd957cC0'  //movr
+  '0x4cb6cef87d8cadf966b455e8bd58fff32aba49d1',
+  '0x8a419ef4941355476cf04933e90bf3bbf2f73814',
+  '0x3e5a2a4812d319ded22479a88ed708c6b55ca0b1',
+  '0x1b80e7da342981314f4032434fe0def21b90ec20',
+  '0xb0d0410d3d158a9b38c36e5aab80264bc5272a20',
+  '0x4e5c590d2fa8aa3bc85342690ecfc33cf1c27ebb'
+
 ]
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
-let MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('20000')
+let MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('2')
 
 // minimum liquidity for price to get tracked
 let MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('2')
