@@ -8,7 +8,7 @@ dataSources:
     name: Factory
     network: metertest
     source:
-      address: '0xa36f84b86cEF6E3315EFee41ca14e33E7C7C31D2'
+      address: '0xF1E58B1f3974C9020f2706b56dD012675d948DC5'
       abi: Factory
       startBlock: 10039518
     mapping:
