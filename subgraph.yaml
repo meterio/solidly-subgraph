@@ -8,9 +8,9 @@ dataSources:
     name: Factory
     network: metertest
     source:
-      address: '0xF1E58B1f3974C9020f2706b56dD012675d948DC5'
+      address: '0xf063E7c32CBeE0890524AB919758ef72De48e18d'
       abi: Factory
-      startBlock: 10039518
+      startBlock: 15002932
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -64,10 +64,3 @@ templates:
           handler: handleSync
 
 
-  
-       
-
-        
-
-             
-        

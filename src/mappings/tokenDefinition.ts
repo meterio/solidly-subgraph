@@ -32,15 +32,6 @@ export class TokenDefinition {
     )
     staticDefinitions.push(tokenMeterGov)
 
-    // Add MTR
-    let tokenMeter = new TokenDefinition(
-      Address.fromString('0x4cb6cEf87d8cADf966B455E8BD58ffF32aBA49D1'),
-      'MTR',
-      'Meter',
-      BigInt.fromI32(18)
-    )
-    staticDefinitions.push(tokenMeter)
-
     return staticDefinitions
   }
 
